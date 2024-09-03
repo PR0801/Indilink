@@ -1,0 +1,243 @@
+:root {
+  --accent-gradient: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(221,95,95,1) 50%, rgba(252,176,69,1) 100%);
+  --primary-green: #04e762;
+  --light-green: #89fc00;
+  --blue: #008bf8;
+  --yellow: #ffbe0b;
+}
+
+.header {
+  background: var(--accent-gradient);
+  color: rgb(0, 0, 0);
+  padding: 15px 20px;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.header-logo {
+  display: flex;
+  align-items: center;
+  margin-right: 10px; /* Minimal gap between logo and text */
+}
+
+.logo-image {
+  width: 60px; /* Increased size of logo */
+  height: 60px; /* Increased size of logo */
+  border-radius: 50%; /* Circular logo */
+}
+
+.header-title {
+  margin: 0;
+  font-size: 3rem; /* Increased size of Indilink */
+  font-weight: bold;
+}
+
+.header .slogan {
+  font-size: 1rem;
+  font-style: italic;
+  color: var(--yellow);
+}
+
+.header nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.header nav ul li {
+  margin-right: 20px;
+}
+
+.header nav ul li a {
+  color: rgb(6, 6, 6);
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+.header nav ul li a:hover {
+  text-decoration: underline;
+}
+
+.footer {
+  background: var(--accent-gradient);
+  color: rgb(37, 226, 226);
+  text-align: center;
+  padding: 15px 20px;
+  position: static; /* Ensures footer stays in place after content */
+  width: 100%;
+  box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.product-card {
+  background-color: white;
+  border: 1px solid var(--light-green);
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  margin: 15px;
+  padding: 20px;
+  text-align: center;
+  width: 250px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.product-card img {
+  max-width: 100%;
+  border-radius: 4px;
+  margin-bottom: 15px;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+form {
+  max-width: 600px;
+  margin: 20px auto;
+  text-align: left;
+  background-color: #bb7c7c;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+form label {
+  display: block;
+  margin: 12px 0 5px;
+  font-weight: bold;
+}
+
+form input, form textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 1px solid var(--light-green);
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+form button {
+  background-color: var(--primary-green);
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+form button:hover {
+  background-color: var(--light-green);
+}
+
+.hero {
+  background-color: var(--blue);
+  color: white;
+  padding: 60px 20px;
+  text-align: center;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  position: relative; /* Ensure that child elements are positioned relative to this */
+  overflow: hidden; /* Hide overflow to keep the images within bounds */
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+.hero-images {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  display: flex;
+  overflow: hidden;
+}
+
+.hero-image {
+  flex: 1;
+  height: 100%;
+  object-fit: cover;
+  animation: slide 20s linear infinite;
+}
+
+.hero-image:nth-child(2) {
+  animation-delay: 10s; /* Offset the second image */
+}
+
+@keyframes slide {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .header nav ul {
+    flex-direction: column;
+    padding: 0;
+  }
+
+  .header nav ul li {
+    margin-bottom: 10px;
+  }
+
+  .product-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .product-card {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .hero {
+    padding: 40px 10px;
+  }
+
+  .footer {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .header h1 {
+    font-size: 1.5rem;
+  }
+
+  .header .slogan {
+    font-size: 0.9rem;
+  }
+
+  .product-card {
+    width: 100%;
+    padding: 15px;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+}
