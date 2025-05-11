@@ -1,4 +1,4 @@
-# 🌐 IndiLink-2
+# 🌐 IndiLink
 
 IndiLink-2 is a **real-time social networking and e-commerce platform** that connects users, facilitates product browsing, and supports social interaction through features like authentication, chat, and user profiles.
 
@@ -17,12 +17,3 @@ IndiLink-2 is a **real-time social networking and e-commerce platform** that con
 - **Backend**: Node.js, Express, MongoDB
 - **Authentication**: JWT (JSON Web Tokens)
 - **State Management**: Context API
-
-## 🛠️ Installation
-
-### Frontend
-
-1. Clone the repository:
-
-   ```bash
-   git clone https://github.com/ankitsingh794/Indilink-2.git
